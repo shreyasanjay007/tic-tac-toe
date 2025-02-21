@@ -12,22 +12,22 @@ let compArray = []
 const box = document.querySelectorAll('.boxes')
 box.forEach( (opt)=>{
     opt.addEventListener('click',()=>{
-        if(opt.innerHTML === 'X'){
-            opt.innerHTML = ''
-            boxArray = boxArray.filter(id => id !== opt.id);
-        } else if(opt.innerHTML === ''){
+        
+        
+        //   if(opt.innerHTML === ''){
             opt.innerHTML = 'X'
             boxArray.push(opt.id)
             compArray = compArray.filter(id => id !== opt.id);
 
-        }
+        // }
 
         console.log(`BoxArray: ${boxArray}`);
 
-        if(boxArray.length + compArray.length === 9){
-            console.log("Game Over!");
-            return;  
-        }
+        // if(boxArray.length + compArray.length === 9){
+        //     if( boxArray.includes('box1',''))
+        //     console.log("Game Over!");
+        //     return;  
+        // }
       
         
         setTimeout( function(){
@@ -43,9 +43,10 @@ box.forEach( (opt)=>{
             compArray.push(ranId)
             console.log(`CompArray:${compArray}`);
             document.getElementById(ranId).innerHTML = 'O'
-
             
         },300 )
+
+        if()
        
         
       
